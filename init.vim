@@ -8,6 +8,7 @@ Plug 'morhetz/gruvbox'
 Plug 'tpope/vim-fugitive'
 "Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }"Plug 'junegunn/fzf.vim'
 Plug 'BurntSushi/ripgrep'
+Plug 'christoomey/vim-tmux-navigator'
 Plug 'sharkdp/fd'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'nvim-lua/plenary.nvim'
