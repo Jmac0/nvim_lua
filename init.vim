@@ -67,7 +67,7 @@ nnoremap <Leader><CR> :so ~/.config/nvim/init.vim<CR>
 
 
 "Telescope
-nnoremap <C-p> <cmd>Telescope find_files<cr>
+nnoremap <C-p> <cmd>Telescope git_files prompt_prefix=🔍<cr>
 nnoremap <leader>fg <cmd>Telescope live_grep<cr>
 nnoremap <leader>fb <cmd>Telescope buffers<cr>
 nnoremap gh <cmd>Telescope find_files hidden=true<cr>
