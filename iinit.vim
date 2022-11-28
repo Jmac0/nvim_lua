@@ -9,6 +9,7 @@ Plug 'tpope/vim-fugitive'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }"Plug 'junegunn/fzf.vim'
 Plug 'BurntSushi/ripgrep'
 Plug 'christoomey/vim-tmux-navigator'
+Plug 'sbdchd/neoformat'
 Plug 'sharkdp/fd'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'nvim-lua/plenary.nvim'
@@ -20,7 +21,7 @@ if executable("rg")
   set grepformat=%f:%l:%c:%m
 endif
 " runs auto tag for ctags  
-let g:autotagTagsFile=".tags"
+let g:autotagStartMethod='fork'
 " Use tab for trigger completion with characters ahead and navigate.
 
 inoremap <silent><expr> <TAB> coc#pum#visible() ? coc#pum#confirm() : "\<C-g>u\<TAB>"
@@ -54,8 +55,12 @@ set signcolumn=yes
 set tags=./tags;
 let @/ = ""
 let &scrolloff = 8
+let g:coc_confing_home = '~/.config/nvim/coc-settings.json'
+let g:neoformat_try_node_exe = 1
  colorscheme gruvbox
- 
+
+
+
  "colors for popups
 highlight Pmenu ctermbg=234 guibg=#1D1D1D
 let mapleader = " "
@@ -78,7 +83,7 @@ nnoremap <Leader><CR> :so ~/.config/nvim/init.vim<CR>
 "Telescope
 nnoremap <C-p> <cmd>Telescope git_files prompt_prefix=🔍<cr>
 nnoremap <leader>fg <cmd>Telescope live_grep<cr>
-nnoremap <C-b> <cmd>Telescope buffers<cr>
+nnoremap <C-b> <cmd>Telescope buffers theme=dropdown<cr>
 nnoremap gh <cmd>Telescope find_files hidden=true<cr>
 
 
@@ -89,8 +94,8 @@ nnoremap <C-k> :cnext<CR>
 "clear higlights 
 nnoremap <leader>h :noh<CR> 
 "prettier
-command! -nargs=0 Gp :CocCommand prettier.forceFormatDocument
-nnoremap gp :silent %!prettier --stdin-filepath %<CR>
+"command! -nargs=0 Gp :CocCommand prettier.forceFormatDocument
+nnoremap gp :Neoformat prettier<CR>
 "F5 open buffer list and jump to 
 "nnoremap <F5> :buffers<CR>:buffer<Space>
 inoremap $  ${}<Left>
