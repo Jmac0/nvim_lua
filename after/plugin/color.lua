@@ -3,10 +3,14 @@
 -- Default options:
 require("gruvbox").setup({
   undercurl = true,
-  transparent_mode = false,
+  transparent_mode = true,
 })
-vim.cmd("colorscheme gruvbox")
+-- check if colorscheme is nstalled 
+local status,_= pcall( vim.cmd,"colorscheme gruvbox")
+if not status then
+	print("colorscheme not found")
+	return
+end
 
 
 vim.o.background = "dark" -- or "light" for light mode
-vim.cmd([[colorscheme gruvbox]])

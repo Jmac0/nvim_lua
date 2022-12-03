@@ -104,15 +104,36 @@ _G.packer_plugins = {
     path = "/Users/jamiemackenzie/.local/share/nvim/site/pack/packer/start/gruvbox.nvim",
     url = "https://github.com/ellisonleao/gruvbox.nvim"
   },
+  neoformat = {
+    loaded = true,
+    path = "/Users/jamiemackenzie/.local/share/nvim/site/pack/packer/start/neoformat",
+    url = "https://github.com/sbdchd/neoformat"
+  },
   ["nvim-cmp"] = {
     loaded = true,
     path = "/Users/jamiemackenzie/.local/share/nvim/site/pack/packer/start/nvim-cmp",
     url = "https://github.com/hrsh7th/nvim-cmp"
   },
+  ["nvim-comment"] = {
+    loaded = true,
+    path = "/Users/jamiemackenzie/.local/share/nvim/site/pack/packer/start/nvim-comment",
+    url = "https://github.com/terrortylor/nvim-comment"
+  },
   ["nvim-lspconfig"] = {
     loaded = true,
     path = "/Users/jamiemackenzie/.local/share/nvim/site/pack/packer/start/nvim-lspconfig",
     url = "https://github.com/neovim/nvim-lspconfig"
+  },
+  ["nvim-ripgrep"] = {
+    config = { "\27LJ\2\n>\0\0\3\0\3\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0004\2\0\0B\0\2\1K\0\1\0\nsetup\17nvim-ripgrep\frequire\0" },
+    loaded = true,
+    path = "/Users/jamiemackenzie/.local/share/nvim/site/pack/packer/start/nvim-ripgrep",
+    url = "https://github.com/rinx/nvim-ripgrep"
+  },
+  ["nvim-tree.lua"] = {
+    loaded = true,
+    path = "/Users/jamiemackenzie/.local/share/nvim/site/pack/packer/start/nvim-tree.lua",
+    url = "https://github.com/nvim-tree/nvim-tree.lua"
   },
   ["packer.nvim"] = {
     loaded = true,
@@ -133,10 +154,29 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/jamiemackenzie/.local/share/nvim/site/pack/packer/start/ultisnips",
     url = "https://github.com/SirVer/ultisnips"
+  },
+  ["vim-fugitive"] = {
+    loaded = true,
+    path = "/Users/jamiemackenzie/.local/share/nvim/site/pack/packer/start/vim-fugitive",
+    url = "https://github.com/tpope/vim-fugitive"
+  },
+  ["vim-surround"] = {
+    loaded = true,
+    path = "/Users/jamiemackenzie/.local/share/nvim/site/pack/packer/start/vim-surround",
+    url = "https://github.com/tpope/vim-surround"
+  },
+  ["vim-tmux-navigator"] = {
+    loaded = true,
+    path = "/Users/jamiemackenzie/.local/share/nvim/site/pack/packer/start/vim-tmux-navigator",
+    url = "https://github.com/christoomey/vim-tmux-navigator"
   }
 }
 
 time([[Defining packer_plugins]], false)
+-- Config for: nvim-ripgrep
+time([[Config for nvim-ripgrep]], true)
+try_loadstring("\27LJ\2\n>\0\0\3\0\3\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0004\2\0\0B\0\2\1K\0\1\0\nsetup\17nvim-ripgrep\frequire\0", "config", "nvim-ripgrep")
+time([[Config for nvim-ripgrep]], false)
 
 _G._packer.inside_compile = false
 if _G._packer.needs_bufread == true then
