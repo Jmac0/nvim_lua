@@ -24,8 +24,6 @@ inoremap("<C-s>","<cmd>w<CR>")
 -- run prettier 
 nnoremap("<leader>gp","<cmd>Neoformat prettier<CR>")
 
--- open netrw
-nnoremap("<leader>v", "<cmd>Ex<CR>")	
 
 --clear higlighting 
 nnoremap("<leader>h", "<cmd>nohl<CR>")	

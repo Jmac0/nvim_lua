@@ -62,5 +62,6 @@ use {
   'nvim-tree/nvim-tree.lua',
   tag = 'nightly' -- optional, updated every week. (see issue #1193)
 }
+use 'nvim-tree/nvim-web-devicons'
 
   end)	
