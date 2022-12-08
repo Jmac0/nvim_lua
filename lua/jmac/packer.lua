@@ -46,9 +46,8 @@ use 'hrsh7th/cmp-path'
 use 'hrsh7th/cmp-cmdline'
 use 'hrsh7th/nvim-cmp'
 -- snipets
-use 'L3MON4D3/LuaSnip'
-use 'saadparwaiz1/cmp_luasnip'
-use "rafamadriz/friendly-snippets"
+ use 'SirVer/ultisnips'
+ use 'quangnguyen30192/cmp-nvim-ultisnips'
 -----------------------------
 -- fugitive Git intergration 
 use 'tpope/vim-fugitive'
@@ -63,10 +62,6 @@ use {
 }
 use 'nvim-tree/nvim-web-devicons'
 -- lualine
-use {
-  'nvim-lualine/lualine.nvim',
-  requires = { 'kyazdani42/nvim-web-devicons', opt = true }
-}
 
 end
 
