@@ -45,7 +45,7 @@ lspconfig.emmet_ls.setup({
 
 	sources = cmp.config.sources({
       { name = 'nvim_lsp' },
-       { name = 'luasnip' }, -- For ultisnips users.
+       { name = 'ultisnips' }, -- For ultisnips users.
        { name = 'path' }, -- path completion 
 	   {name = 'buffer'}, -- buffer completion
     })
