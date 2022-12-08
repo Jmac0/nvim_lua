@@ -14,9 +14,7 @@ local ensure_packer = function()
 end
 
 local packer_bootstrap = ensure_packer()
-
-
-
+ 
 
 return require('packer').startup(function(use)
   -- Packer can manage itself
@@ -47,10 +45,11 @@ use 'hrsh7th/cmp-buffer'
 use 'hrsh7th/cmp-path'
 use 'hrsh7th/cmp-cmdline'
 use 'hrsh7th/nvim-cmp'
-use 'SirVer/ultisnips'
+-- snipets
+use 'L3MON4D3/LuaSnip'
+use 'saadparwaiz1/cmp_luasnip'
+use "rafamadriz/friendly-snippets"
 -----------------------------
---ultisnips
-use 'quangnguyen30192/cmp-nvim-ultisnips'
 -- fugitive Git intergration 
 use 'tpope/vim-fugitive'
 -- Prettier/formatter 
@@ -66,3 +65,5 @@ use 'nvim-tree/nvim-web-devicons'
 end
 
 )	
+
+

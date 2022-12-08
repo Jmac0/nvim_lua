@@ -1,6 +1,5 @@
      local cmp = require'cmp'
-
-
+require("luasnip.loaders.from_vscode").lazy_load()
 -------------------------- Emmet ------------------------------------------- 
 local lspconfig = require('lspconfig')
 local configs = require('lspconfig/configs')
@@ -23,12 +22,10 @@ lspconfig.emmet_ls.setup({
 -------------------------------------------------------------------------------
 
 
-
   cmp.setup({
     snippet = {
-      -- REQUIRED - you must specify a snippet engine
       expand = function(args)
-          vim.fn["UltiSnips#Anon"](args.body) -- For `ultisnips` users.
+		  luasnip.lsp_expand(args.body)
       end,
     },
     window = {
@@ -48,9 +45,9 @@ lspconfig.emmet_ls.setup({
 
 	sources = cmp.config.sources({
       { name = 'nvim_lsp' },
-       { name = 'ultisnips' }, -- For ultisnips users.
-       { name = 'path' }, -- For ultisnips users.
-	   {name = 'buffer'}
+       { name = 'luasnip' }, -- For ultisnips users.
+       { name = 'path' }, -- path completion 
+	   {name = 'buffer'}, -- buffer completion
     })
  
   }) 
