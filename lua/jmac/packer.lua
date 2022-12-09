@@ -14,7 +14,9 @@ local ensure_packer = function()
 end
 
 local packer_bootstrap = ensure_packer()
- 
+
+
+
 
 return require('packer').startup(function(use)
   -- Packer can manage itself
@@ -43,12 +45,12 @@ use 'neovim/nvim-lspconfig'
 use 'hrsh7th/cmp-nvim-lsp'
 use 'hrsh7th/cmp-buffer'
 use 'hrsh7th/cmp-path'
-use 'hrsh7th/cmp-cmdline'
+--use 'hrsh7th/cmp-cmdline'
 use 'hrsh7th/nvim-cmp'
--- snipets
- use 'SirVer/ultisnips'
- use 'quangnguyen30192/cmp-nvim-ultisnips'
+use 'SirVer/ultisnips'
 -----------------------------
+--ultisnips
+use 'quangnguyen30192/cmp-nvim-ultisnips'
 -- fugitive Git intergration 
 use 'tpope/vim-fugitive'
 -- Prettier/formatter 
@@ -61,8 +63,6 @@ use {
   tag = 'nightly' -- optional, updated every week. (see issue #1193)
 }
 use 'nvim-tree/nvim-web-devicons'
--- lualine
-
 end
 
 )	

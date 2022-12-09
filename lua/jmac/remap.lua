@@ -12,6 +12,7 @@ inoremap("{{","{}<left>")
 inoremap("[[","[]<left>")
 inoremap("((","()<left>")
 inoremap("''","''<left>")
+inoremap("<leader>t","<cmd>NvimTreeToggle<CR>")
 
 -- back to normal mode on jk press   
 inoremap("jk", "<esc>")
