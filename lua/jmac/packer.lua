@@ -21,7 +21,6 @@ return require('packer').startup(function(use)
   use 'wbthomason/packer.nvim'
   --theame
   use { "ellisonleao/gruvbox.nvim" }
---telescope
   use {
   'nvim-telescope/telescope.nvim', tag = '0.1.0',
   requires = { {'nvim-lua/plenary.nvim'} }
@@ -50,6 +49,8 @@ use 'L3MON4D3/LuaSnip'
 use 'saadparwaiz1/cmp_luasnip'
 use "rafamadriz/friendly-snippets"
 -----------------------------
+-- --- tree sitter
+use "nvim-treesitter/nvim-treesitter"
 -- fugitive Git intergration 
 use 'tpope/vim-fugitive'
 -- Prettier/formatter 
