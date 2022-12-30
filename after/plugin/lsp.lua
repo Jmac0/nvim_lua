@@ -60,7 +60,17 @@ lspconfig.emmet_ls.setup({
   }
   require('lspconfig')['tsserver'].setup {
     capabilities = capabilities
+}
 
-
+  require('lspconfig')['cssls'].setup {
+    capabilities = capabilities,
+	settings = {
+		-- add the same for scss ect if needed 
+  css = {
+    lint = {
+       unknownAtRules = 'ignore'
+    }
+  }
+}
 }
 

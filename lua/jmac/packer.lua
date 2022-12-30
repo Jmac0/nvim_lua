@@ -38,6 +38,8 @@ use {
   use 'christoomey/vim-tmux-navigator'
   use 'tpope/vim-surround'
   -- Cmp LSP provider
+
+use "williamboman/nvim-lsp-installer"
 use 'neovim/nvim-lspconfig'
 use 'hrsh7th/cmp-nvim-lsp'
 use 'hrsh7th/cmp-buffer'
