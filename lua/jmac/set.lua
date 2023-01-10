@@ -37,5 +37,7 @@ vim.opt.smartcase = true
 vim.opt.ignorecase = true
 vim.opt.incsearch = true
 
+-- Add chars that vim will select as a whole word
+vim.opt.iskeyword:append({'-'})
 -- Clipboard
  vim.opt.clipboard:append("unnamedplus")
