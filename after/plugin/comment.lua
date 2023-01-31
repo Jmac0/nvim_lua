@@ -4,4 +4,3 @@ if not setup then
 end
 
 nvim_comment.setup()
-print("comment")

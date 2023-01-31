@@ -47,6 +47,13 @@ nnoremap("<leader>tx", "<cmd>tabclose<CR>") -- Close tab
 nnoremap("<S-O-right>", "<cmd>tabn<CR>") -- New tab
 nnoremap("<S-O-left>", "<cmd>tabp<CR>") -- New tab 
 
+-- Previous and next buffer
+
+
+nnoremap("<leader>bd", "<cmd>w|bd|b#<CR>") -- delete current and open previous buffer
+-- Previous and next buffer
+nnoremap("<leader><left>", "<cmd>bp<CR>") -- Previous buffer
+nnoremap("<leader><right>", "<cmd>bn<CR>") -- Previous buffer
 -- NvimTree Toggle
 
 nnoremap("<leader>e","<cmd>NvimTreeToggle<CR>")

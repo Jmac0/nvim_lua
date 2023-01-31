@@ -26,10 +26,10 @@ luasnip.filetype_extend("typescript", { "typescript" })
 
 
 	sources = cmp.config.sources({
+	   {name = 'buffer'}, -- buffer completion
       { name = 'nvim_lsp' },
        { name = 'luasnip' }, -- For ultisnips users.
        { name = 'path' }, -- path completion 
-	   {name = 'buffer'}, -- buffer completion
     })
  
   }) 

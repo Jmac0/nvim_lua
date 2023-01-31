@@ -1,0 +1,51 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.8	//
+$	iinit.vim	/^inoremap $  ${}<Left>$/;"	m
+(	iinit.vim	/^inoremap ( ()$/;"	m
+/*	iinit.vim	/^inoremap \/* \/* *\/$/;"	m
+<C-b>	iinit.vim	/^nnoremap <C-b> <cmd>Telescope buffers theme=dropdown<cr>$/;"	m
+<C-j>	iinit.vim	/^nnoremap <C-j> :cprev<CR> $/;"	m
+<C-k>	iinit.vim	/^nnoremap <C-k> :cnext<CR> $/;"	m
+<C-p>	iinit.vim	/^nnoremap <C-p> <cmd>Telescope git_files prompt_prefix=üîç<cr>$/;"	m
+<C-s>	iinit.vim	/^inoremap <C-s> <esc>:w<CR>$/;"	m
+<C-s>	iinit.vim	/^nnoremap <C-s> <esc>:w<CR>$/;"	m
+<Leader><CR>	iinit.vim	/^nnoremap <Leader><CR> :so ~\/.config\/nvim\/init.vim<CR>$/;"	m
+<S-C-Down>	iinit.vim	/^vnoremap <S-C-Down> :m '>+1<CR>gv=gv$/;"	m
+<S-C-Up>	iinit.vim	/^vnoremap <S-C-Up>   :m '<-2<CR>gv=gv$/;"	m
+<TAB>	iinit.vim	/^inoremap <silent><expr> <TAB> coc#pum#visible() ? coc#pum#confirm() : "\\<C-g>u\\<TAB>"$/;"	m
+<leader>fg	iinit.vim	/^nnoremap <leader>fg <cmd>Telescope live_grep<cr>$/;"	m
+<leader>h	iinit.vim	/^nnoremap <leader>h :noh<CR> $/;"	m
+<leader>pf	iinit.vim	/^nnoremap <leader>pf :Files<CR> $/;"	m
+<leader>pv	iinit.vim	/^nnoremap <leader>pv :Vex<CR>:vertical resize 35<CR>$/;"	m
+=>	iinit.vim	/^inoremap => = () => {};$/;"	m
+[	iinit.vim	/^inoremap [ []<Left>$/;"	m
+bind	lua/jmac/keymap.lua	/^local function bind(op, outer_opts)$/;"	f
+config 	lua/jmac/packer.lua	/^  config = function()$/;"	f
+disable 	after/plugin/treeSitter.lua	/^    disable = function(lang, buf)$/;"	f
+expand 	after/plugin/lsp.lua	/^       expand = function(args)$/;"	f
+g:autotagStartMethod	iinit.vim	/^let g:autotagStartMethod='fork'$/;"	v
+g:coc_confing_home	iinit.vim	/^let g:coc_confing_home = '~\/.config\/nvim\/coc-settings.json'$/;"	v
+g:neoformat_try_node_exe	iinit.vim	/^let g:neoformat_try_node_exe = 1$/;"	v
+getPaths	undo/%Users%jamiemackenzie%Documents%VIViD%showchoir%showchoirweb%pages%monthlysignup.tsx	/^getPaths()/;"	m
+getPaths	undo/%Users%jamiemackenzie%Documents%VIViD%showchoir%showchoirweb%pages%monthlysignup.tsx	/^getPaths()ı/;"	m
+gh	iinit.vim	/^nnoremap gh <cmd>Telescope find_files hidden=true<cr>$/;"	m
+gp	iinit.vim	/^nnoremap gp :Neoformat prettier<CR>$/;"	m
+if vim.api.nvim_call_function('has', {'nvim-0.5'}) ~	plugin/packer_compiled.lua	/^if vim.api.nvim_call_function('has', {'nvim-0.5'}) ~= 1 then$/;"	f
+jimmy	test.ts	/^function jimmy(){$/;"	f
+lll	iinit.vim	/^inoremap lll console.log()<Left>$/;"	m
+local no_errors, error_msg 	plugin/packer_compiled.lua	/^local no_errors, error_msg = pcall(function()$/;"	f
+mapleader	iinit.vim	/^let mapleader = " "$/;"	v
+return	undo/%Users%jamiemackenzie%Documents%VIViD%showchoir%showchoirweb%pages%[slug].tsx	/^  return (/;"	m
+return	undo/%Users%jamiemackenzie%Documents%VIViD%showchoir%showchoirweb%pages%[slug].tsx	/^  return (ı/;"	m
+return	undo/%Users%jamiemackenzie%Documents%VIViD%showchoir%showchoirweb%pages%index.tsx	/^  return (/;"	m
+return	undo/%Users%jamiemackenzie%Documents%VIViD%showchoir%showchoirweb%pages%monthlysignup.tsx	/^  return (/;"	m
+return	undo/%Users%jamiemackenzie%Documents%VIViD%showchoir%showchoirweb%pages%monthlysignup.tsx	/^  return (5Åı/;"	m
+save_profiles	plugin/packer_compiled.lua	/^local function save_profiles(threshold)$/;"	f
+time 	plugin/packer_compiled.lua	/^  time = function(chunk, start) end$/;"	f
+time 	plugin/packer_compiled.lua	/^  time = function(chunk, start)$/;"	f
+try_loadstring	plugin/packer_compiled.lua	/^local function try_loadstring(s, component, name)$/;"	f
+{	iinit.vim	/^inoremap { {}<Left>$/;"	m
