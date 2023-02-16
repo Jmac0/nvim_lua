@@ -48,12 +48,18 @@ nnoremap("<S-O-right>", "<cmd>tabn<CR>") -- New tab
 nnoremap("<S-O-left>", "<cmd>tabp<CR>") -- New tab 
 
 -- Previous and next buffer
-
-
 nnoremap("<leader>bd", "<cmd>w|bd|b#<CR>") -- delete current and open previous buffer
 -- Previous and next buffer
 nnoremap("<leader><left>", "<cmd>bp<CR>") -- Previous buffer
-nnoremap("<leader><right>", "<cmd>bn<CR>") -- Previous buffer
+nnoremap("<leader><right>", "<cmd>bn<CR>") -- Next buffer
 -- NvimTree Toggle
-
 nnoremap("<leader>e","<cmd>NvimTreeToggle<CR>")
+------------------Find and replace------------------
+-- use * to higlight word then leader r to enter replace mode
+nnoremap("<leader>r", ":%s///g<left><left>") 
+
+-- use * to higlight word then leader r to enter replace mode
+nnoremap("<leader>rc", ":%s///gc<left><left><left>")
+-- as above, but with a visual selection 
+vnoremap("<leader>r", ":%s///g<left><left>")
+vnoremap("<leader>rc", ":%s///gc<left><left><left>")

@@ -57,6 +57,10 @@ use {
   requires = { 'kyazdani42/nvim-web-devicons', opt = true }
 }
 
+-- Tabnine
+use {'tzachar/cmp-tabnine', run='./install.sh', requires = 'hrsh7th/nvim-cmp'}
+
+--use { 'codota/tabnine-nvim', run = "./dl_binaries.sh" }
 end
 
 )	
