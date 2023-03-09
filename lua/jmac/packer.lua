@@ -20,6 +20,20 @@ use {
     }
   end
   }
+
+-- lsp list component 
+use {
+  "folke/trouble.nvim",
+  requires = "nvim-tree/nvim-web-devicons",
+  config = function()
+    require("trouble").setup {
+      -- your configuration comes here
+      -- or leave it empty to use the default settings
+      -- refer to the configuration section below
+    }
+  end
+}
+
   -- navigate splits and tmux with C-hjkl
   use 'christoomey/vim-tmux-navigator'
   use 'tpope/vim-surround'
@@ -61,6 +75,7 @@ use {
 use {'tzachar/cmp-tabnine', run='./install.sh', requires = 'hrsh7th/nvim-cmp'}
 
 --use { 'codota/tabnine-nvim', run = "./dl_binaries.sh" }
+use{'rhysd/vim-grammarous'}
 end
 
 )	

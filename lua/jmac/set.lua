@@ -5,7 +5,6 @@ vim.g.mapleader = " "
 -- spelling on 
 vim.opt.spell = true
 
--- numbers and lines 
 vim.opt.number = true
 vim.opt.nu = true
 vim.opt.relativenumber = true
