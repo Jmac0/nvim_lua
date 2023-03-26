@@ -24,13 +24,30 @@ lspconfig.emmet_ls.setup({
        },
      }
  })
-
-
-
-
-
-
-
+-- lua language support
+require'lspconfig'.lua_ls.setup {
+  settings = {
+    Lua = {
+      runtime = {
+        -- Tell the language server which version of Lua you're using (most likely LuaJIT in the case of Neovim)
+        version = 'LuaJIT',
+      },
+      diagnostics = {
+        -- Get the language server to recognize the `vim` global
+        globals = {'vim'},
+      },
+      workspace = {
+        -- Make the server aware of Neovim runtime files
+        library = vim.api.nvim_get_runtime_file("", true),
+      },
+      -- Do not send telemetry data containing a randomized but unique identifier
+      telemetry = {
+        enable = false,
+      },
+    },
+  },
+}
+--
   cmp.setup({
     snippet = {
        expand = function(args)
@@ -52,18 +69,20 @@ lspconfig.emmet_ls.setup({
     }),
 
 
+
+
+
 	sources = cmp.config.sources({
 	   {name = 'buffer'}, -- buffer completion
 { name = 'cmp_tabnine' },
+ { name = 'nvim_lua', keyword_length = 2},
 	   { name = 'luasnip' }, -- For ultisnips users.
       { name = 'nvim_lsp' },
        { name = 'path' }, -- path completion 
     })
- 
-  }) 
+   })
 
    -- Set up lspconfig.
-  local capabilities = require('cmp_nvim_lsp').default_capabilities()
   require('lspconfig')['tailwindcss'].setup {
     capabilities = capabilities
   }
@@ -83,3 +102,30 @@ lspconfig.emmet_ls.setup({
 }
 }
 
+-- Setings for how  lsp diagnostics are handled.
+vim.o.updatetime = 400;
+
+vim.diagnostic.config({
+  virtual_text = false,
+  signs = true,
+  underline = true,
+  update_in_insert = false,
+  severity_sort = false,
+});
+
+vim.api.nvim_create_autocmd("CursorHold", {
+  buffer = bufnr,
+  callback = function()
+    local opts = {
+      focusable = true,
+      close_events = { "BufLeave", "InsertEnter", "FocusLost" },
+      border = 'rounded',
+      source = 'always',
+      prefix = ' ',
+      scope = 'cursor',
+    }
+    vim.diagnostic.open_float(nil, opts)
+  end
+})
+
+vim.cmd [[autocmd! CursorHold,CursorHoldI * lua vim.diagnostic.open_float(nil, {focus=false})]]

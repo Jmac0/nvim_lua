@@ -1,7 +1,4 @@
 -- Only required if you have packer configured as `opt`
-
- 
-
 return require('packer').startup(function(use)
   -- Packer can manage itself
   use 'wbthomason/packer.nvim'
@@ -38,8 +35,8 @@ use {
   use 'christoomey/vim-tmux-navigator'
   use 'tpope/vim-surround'
   -- Cmp LSP provider
-
-use "williamboman/nvim-lsp-installer"
+use 'williamboman/mason.nvim'
+use 'williamboman/mason-lspconfig.nvim'
 use 'neovim/nvim-lspconfig'
 use 'hrsh7th/cmp-nvim-lsp'
 use 'hrsh7th/cmp-buffer'
@@ -78,4 +75,4 @@ use {'tzachar/cmp-tabnine', run='./install.sh', requires = 'hrsh7th/nvim-cmp'}
 use{'rhysd/vim-grammarous'}
 end
 
-)	
+)

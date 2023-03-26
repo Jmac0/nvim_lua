@@ -7,6 +7,12 @@ inoremap("lll","console.log()<left>")
 -- surround then gc
 -- docs at terrortylor/nvim-comment
 
+--Move lines up and down in visual mode 
+--vnoremap ("<S-C-Up>",   "<cmd>m <-2<CR>gv=gv")
+--vnoremap ("<S-C-Down>", "<cmd>m >+1<CR>gv=gv")
+
+
+
 -- bracket + quote pairs 
 inoremap("{{","{}<left>")
 inoremap("[[","[]<left>")
@@ -22,7 +28,6 @@ inoremap("<C-s>","<cmd>w<CR>")
 
 -- run prettier 
 nnoremap("<leader>gp","<cmd>Neoformat prettier<CR>")
-
 
 --clear higlighting 
 nnoremap("<leader>h", "<cmd>nohl<CR>")	
@@ -46,12 +51,16 @@ nnoremap("<leader>to", "<cmd>tabnew<CR>") -- New tab
 nnoremap("<leader>tx", "<cmd>tabclose<CR>") -- Close tab
 nnoremap("<S-O-right>", "<cmd>tabn<CR>") -- New tab
 nnoremap("<S-O-left>", "<cmd>tabp<CR>") -- New tab 
-
+-- Buffers
 -- Previous and next buffer
 nnoremap("<leader>bd", "<cmd>w|bd|b#<CR>") -- delete current and open previous buffer
 -- Previous and next buffer
 nnoremap("<leader><left>", "<cmd>bp<CR>") -- Previous buffer
 nnoremap("<leader><right>", "<cmd>bn<CR>") -- Next buffer
+-- save and delet all buffers, open NvimTree
+nnoremap("<leader>ka","<cmd>wa|%bd|NvimTreeToggle<CR>")
+
+
 -- NvimTree Toggle
 nnoremap("<leader>e","<cmd>NvimTreeToggle<CR>")
 ------------------Find and replace------------------
@@ -63,6 +72,10 @@ nnoremap("<leader>rc", ":%s///gc<left><left><left>")
 -- as above, but with a visual selection 
 vnoremap("<leader>r", ":%s///g<left><left>")
 vnoremap("<leader>rc", ":%s///gc<left><left><left>")
+--- React jsx comment block 
+inoremap("<leader>rc", "{/**/}<left><left><left>") -- Previous buffer
+
+
 
 -- Keymaps for Trouble lsp plugin 
 vim.keymap.set("n", "<leader>xx", "<cmd>TroubleToggle<cr>",

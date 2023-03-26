@@ -4,14 +4,14 @@
 vim.g.mapleader = " "
 -- spelling on 
 vim.opt.spell = true
-
+vim.g.guifont=12
 vim.opt.number = true
 vim.opt.nu = true
 vim.opt.relativenumber = true
-
+vim.g.directory = ''
 -- highlight current line
 vim.opt.cursorline = true
-
+vim.g.noswapfile = true
 -- Tabs and spaces
 vim.opt.shiftwidth = 4
 vim.opt.tabstop = 4
