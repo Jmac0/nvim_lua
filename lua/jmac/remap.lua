@@ -18,6 +18,7 @@ inoremap("{{","{}<left>")
 inoremap("[[","[]<left>")
 inoremap("((","()<left>")
 inoremap("''","''<left>")
+inoremap("=>","() => {}")
 
 -- back to normal mode on jk press   
 inoremap("jk", "<esc>")

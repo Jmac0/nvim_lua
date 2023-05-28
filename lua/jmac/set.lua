@@ -1,10 +1,9 @@
 
 
-
 vim.g.mapleader = " "
 -- spelling on 
 vim.opt.spell = true
-vim.g.guifont=12
+vim.g.guifont=14
 vim.opt.number = true
 vim.opt.nu = true
 vim.opt.relativenumber = true
